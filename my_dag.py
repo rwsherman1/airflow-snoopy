@@ -28,17 +28,17 @@ with DAG("my_dag", start_date=datetime(2024, 1, 1),
          schedule_interval="@daily", catchup=False) as dag:
     
             training_model_A = PythonOperator(
-                    task_id="training_model_A"
+                    task_id="training_model_A",
                     python_callable=_training_model
             )
 
             training_model_B = PythonOperator(
-                    task_id="training_model_B"
+                    task_id="training_model_B",
                     python_callable=_training_model
             )
 
             training_model_C = PythonOperator(
-                    task_id="training_model_C"
+                    task_id="training_model_C",
                     python_callable=_training_model
             )
 
