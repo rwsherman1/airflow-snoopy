@@ -9,8 +9,8 @@ from random import randint
 
 def _choose_best_model(ti):
         accuracies = ti.xcom_pull(task_ids=[
-                'training_model_A'
-                'training_model_B'
+                'training_model_A',
+                'training_model_B',
                 'training_model_C'
         ])
         best_accuracy = max(accuracies)
